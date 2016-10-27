@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<table class="table">
+    <thead>
+        <tr >
+            <th></th>
+            <th ng-repeat="courses in exctrl.courses">
+                {{courses.courseName}}
+            </th>
+            <th>Average</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="student in exctrl.students">
+            <td>{{student.name}}</td>
+            <td ng-repeat="gr in student.grades">{{gr.grade}}</td>
+            <td>{{calculateAverage(student.grades)}}</td>
+        </tr>
+    </tbody>
+</table>
